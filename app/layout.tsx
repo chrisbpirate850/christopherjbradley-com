@@ -3,6 +3,7 @@ import './globals.css'
 import { ThemeProvider } from '@/components/ThemeProvider'
 import { generateSEO, generateViewport, generateWebsiteSchema } from '@/lib/seo'
 import { StructuredData } from '@/components/StructuredData'
+import GoogleAnalytics from '@/components/GoogleAnalytics'
 
 export const metadata: Metadata = generateSEO()
 export const viewport: Viewport = generateViewport()
@@ -22,6 +23,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         <StructuredData data={websiteSchema} />
+        <GoogleAnalytics />
       </head>
       <body>
         <ThemeProvider

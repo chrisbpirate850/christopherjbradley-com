@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
-import { ThemeToggle } from '@/components/ThemeToggle'
+import { Navigation } from '@/components/Navigation'
 import { OptimizedImage } from '@/components/OptimizedImage'
+import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Christopher J. Bradley | Veteran, Father, Builder of Solutions',
@@ -74,32 +75,7 @@ export default function Home() {
       />
 
       {/* Header */}
-      <header className="border-b border-navy/10 dark:border-slate-700">
-        <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="flex h-16 items-center justify-between">
-            <div className="flex items-center">
-              <h1 className="text-xl font-bold text-navy dark:text-slate-100">
-                Christopher J. Bradley
-              </h1>
-            </div>
-            <div className="flex items-center gap-4">
-              <a
-                href="#story"
-                className="text-sm font-medium text-navy/80 transition-colors hover:text-navy dark:text-slate-300 dark:hover:text-slate-100"
-              >
-                Story
-              </a>
-              <a
-                href="#platforms"
-                className="text-sm font-medium text-navy/80 transition-colors hover:text-navy dark:text-slate-300 dark:hover:text-slate-100"
-              >
-                Platforms
-              </a>
-              <ThemeToggle />
-            </div>
-          </div>
-        </nav>
-      </header>
+      <Navigation />
 
       {/* Hero Section */}
       <main>
@@ -667,6 +643,163 @@ export default function Home() {
           </div>
         </section>
 
+        {/* My Story - Resources Section */}
+        <section className="bg-navy/5 py-16 sm:py-24 dark:bg-slate-900/50">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h3 className="text-3xl font-bold text-navy dark:text-slate-100 sm:text-4xl">
+                My Story
+              </h3>
+              <p className="mt-4 text-lg text-navy/70 dark:text-slate-300">
+                Personal experiences that fuel the mission for reform
+              </p>
+            </div>
+
+            <div className="grid gap-8 md:grid-cols-3">
+              {/* Veterans & PTSD Custody */}
+              <Link
+                href="/veterans-ptsd-custody"
+                className="group relative rounded-lg bg-white p-8 shadow-sm transition-all hover:shadow-lg dark:bg-slate-800 border-2 border-transparent hover:border-red/30"
+              >
+                <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-red/10">
+                  <svg
+                    className="h-6 w-6 text-red"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth={2}
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
+                    />
+                  </svg>
+                </div>
+                <h4 className="text-xl font-bold text-navy dark:text-slate-100 mb-2">
+                  Veterans & PTSD Custody
+                </h4>
+                <p className="text-sm font-semibold text-red mb-3">When the VA Failed Me Twice</p>
+                <p className="text-sm text-navy/70 leading-relaxed dark:text-slate-300 mb-4">
+                  24 years for a diagnosis. 10 years for proper benefits. By then, I'd lost my
+                  daughter. How VA delays and inadequate disability ratings cost veterans their
+                  families.
+                </p>
+                <span className="inline-flex items-center text-sm font-semibold text-red group-hover:gap-2 transition-all">
+                  Read My Story
+                  <svg
+                    className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M13 7l5 5m0 0l-5 5m5-5H6"
+                    />
+                  </svg>
+                </span>
+              </Link>
+
+              {/* Fighting Parental Alienation */}
+              <Link
+                href="/fighting-parental-alienation"
+                className="group relative rounded-lg bg-white p-8 shadow-sm transition-all hover:shadow-lg dark:bg-slate-800 border-2 border-transparent hover:border-gold/30"
+              >
+                <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-gold/10">
+                  <svg
+                    className="h-6 w-6 text-gold"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth={2}
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M6 18L18 6M6 6l12 12"
+                    />
+                  </svg>
+                </div>
+                <h4 className="text-xl font-bold text-navy dark:text-slate-100 mb-2">
+                  Fighting Parental Alienation
+                </h4>
+                <p className="text-sm font-semibold text-gold mb-3">Six Years of Being Erased</p>
+                <p className="text-sm text-navy/70 leading-relaxed dark:text-slate-300 mb-4">
+                  From engaged father to erased visitor. How family courts enable parental
+                  alienation and what I learned from losing my daughter for six years and counting.
+                </p>
+                <span className="inline-flex items-center text-sm font-semibold text-gold group-hover:gap-2 transition-all">
+                  Read My Story
+                  <svg
+                    className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M13 7l5 5m0 0l-5 5m5-5H6"
+                    />
+                  </svg>
+                </span>
+              </Link>
+
+              {/* Family Court Reform */}
+              <Link
+                href="/family-court-reform"
+                className="group relative rounded-lg bg-white p-8 shadow-sm transition-all hover:shadow-lg dark:bg-slate-800 border-2 border-transparent hover:border-navy/30"
+              >
+                <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-navy/10">
+                  <svg
+                    className="h-6 w-6 text-navy dark:text-slate-100"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth={2}
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"
+                    />
+                  </svg>
+                </div>
+                <h4 className="text-xl font-bold text-navy dark:text-slate-100 mb-2">
+                  Family Court Reform
+                </h4>
+                <p className="text-sm font-semibold text-navy mb-3 dark:text-slate-300">
+                  Running to Fix the System
+                </p>
+                <p className="text-sm text-navy/70 leading-relaxed dark:text-slate-300 mb-4">
+                  22 million children affected. A broken system that destroys families. Why I'm
+                  running for Congress and the federal reforms needed to protect parental rights.
+                </p>
+                <span className="inline-flex items-center text-sm font-semibold text-navy group-hover:gap-2 transition-all dark:text-slate-100">
+                  Read My Story
+                  <svg
+                    className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M13 7l5 5m0 0l-5 5m5-5H6"
+                    />
+                  </svg>
+                </span>
+              </Link>
+            </div>
+          </div>
+        </section>
+
         {/* Closing Statement */}
         <section className="py-16 sm:py-24">
           <div className="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
@@ -685,7 +818,151 @@ export default function Home() {
       {/* Footer */}
       <footer className="border-t border-navy/10 bg-navy/5 dark:border-slate-700 dark:bg-slate-900/50">
         <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-          <div className="text-center">
+          <div className="grid gap-8 md:grid-cols-4 mb-8">
+            {/* Platforms */}
+            <div>
+              <h4 className="text-sm font-semibold text-navy dark:text-slate-100 mb-4">
+                Platforms
+              </h4>
+              <ul className="space-y-2">
+                <li>
+                  <a
+                    href="https://thereisstilltime.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-navy/70 hover:text-gold dark:text-slate-300 dark:hover:text-gold transition-colors"
+                  >
+                    There Is Still Time
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://thecentralquestion.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-navy/70 hover:text-gold dark:text-slate-300 dark:hover:text-gold transition-colors"
+                  >
+                    The Central Question
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://sunsetsforthesoul.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-navy/70 hover:text-gold dark:text-slate-300 dark:hover:text-gold transition-colors"
+                  >
+                    Sunsets for the Soul
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://familyunityhub.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-navy/70 hover:text-gold dark:text-slate-300 dark:hover:text-gold transition-colors"
+                  >
+                    Family Unity Hub
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            {/* Constitutional Education */}
+            <div>
+              <h4 className="text-sm font-semibold text-navy dark:text-slate-100 mb-4">
+                Constitutional Education
+              </h4>
+              <ul className="space-y-2">
+                <li>
+                  <a
+                    href="https://thecitizenscompass.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-navy/70 hover:text-gold dark:text-slate-300 dark:hover:text-gold transition-colors"
+                  >
+                    The Citizen's Compass
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://theartofcitizenship.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-navy/70 hover:text-gold dark:text-slate-300 dark:hover:text-gold transition-colors"
+                  >
+                    Constitutional Analyzer
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://libertysprinciplespals.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-navy/70 hover:text-gold dark:text-slate-300 dark:hover:text-gold transition-colors"
+                  >
+                    Liberty's Principles Pals
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            {/* My Story */}
+            <div>
+              <h4 className="text-sm font-semibold text-navy dark:text-slate-100 mb-4">My Story</h4>
+              <ul className="space-y-2">
+                <li>
+                  <Link
+                    href="/veterans-ptsd-custody"
+                    className="text-sm text-navy/70 hover:text-gold dark:text-slate-300 dark:hover:text-gold transition-colors"
+                  >
+                    Veterans & PTSD Custody
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/fighting-parental-alienation"
+                    className="text-sm text-navy/70 hover:text-gold dark:text-slate-300 dark:hover:text-gold transition-colors"
+                  >
+                    Fighting Parental Alienation
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/family-court-reform"
+                    className="text-sm text-navy/70 hover:text-gold dark:text-slate-300 dark:hover:text-gold transition-colors"
+                  >
+                    Family Court Reform
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            {/* About */}
+            <div>
+              <h4 className="text-sm font-semibold text-navy dark:text-slate-100 mb-4">About</h4>
+              <ul className="space-y-2">
+                <li>
+                  <a
+                    href="#story"
+                    className="text-sm text-navy/70 hover:text-gold dark:text-slate-300 dark:hover:text-gold transition-colors"
+                  >
+                    My Journey
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#platforms"
+                    className="text-sm text-navy/70 hover:text-gold dark:text-slate-300 dark:hover:text-gold transition-colors"
+                  >
+                    Five Platforms
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="border-t border-navy/10 pt-8 text-center dark:border-slate-700">
             <p className="text-sm text-navy/70 dark:text-slate-300">
               &copy; {new Date().getFullYear()} Christopher J. Bradley. Veteran, Father, Builder of
               Solutions.
