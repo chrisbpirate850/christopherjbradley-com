@@ -601,6 +601,72 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Latest Work - The Book */}
+        <section className="bg-gradient-to-r from-gold/10 to-gold/5 py-16 sm:py-24 dark:from-slate-800/50 dark:to-slate-900/50">
+          <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+            <div className="rounded-lg bg-white p-8 shadow-lg dark:bg-slate-800 sm:p-12 border-2 border-gold/30">
+              <div className="grid gap-8 lg:grid-cols-2 lg:gap-12 items-center">
+                {/* Book Content */}
+                <div>
+                  <div className="mb-4">
+                    <span className="inline-block rounded-full bg-gold/10 px-4 py-1 text-sm font-semibold text-gold">
+                      Latest Work
+                    </span>
+                  </div>
+                  <h3 className="text-3xl font-bold text-navy dark:text-slate-100 mb-4">
+                    Common Sense: Family Is Fundamental
+                  </h3>
+                  <p className="text-lg font-semibold text-gold mb-4">
+                    The Constitutional Case for Family Court Reform
+                  </p>
+                  <p className="text-navy/80 dark:text-slate-300 leading-relaxed mb-6">
+                    The comprehensive constitutional, historical, and practical case for why family
+                    must be recognized as the fundamental unit of society—and why family courts
+                    violating that principle threaten freedom itself.
+                  </p>
+                  <ul className="space-y-2 text-sm text-navy/70 dark:text-slate-300 mb-6">
+                    <li>• The founding fathers' understanding of family and liberty</li>
+                    <li>• The 28 principles that built America</li>
+                    <li>• Constitutional framework for federal reform</li>
+                    <li>• Specific policy proposals and legislative solutions</li>
+                  </ul>
+                  <a
+                    href="https://amzn.to/4hgYTIA"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center rounded-lg bg-gold px-6 py-3 text-base font-semibold text-white shadow-md transition-all hover:bg-gold/90 hover:shadow-lg"
+                  >
+                    Available on Amazon
+                    <svg
+                      className="ml-2 h-5 w-5"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M13 7l5 5m0 0l-5 5m5-5H6"
+                      />
+                    </svg>
+                  </a>
+                </div>
+
+                {/* Book Visual/Quote */}
+                <div className="bg-navy/5 rounded-lg p-8 dark:bg-slate-900/50 border-l-4 border-gold">
+                  <blockquote className="text-lg leading-relaxed text-navy/80 dark:text-slate-300 italic mb-4">
+                    "The family is the fundamental unit of any free society. When family courts
+                    systematically destroy families, they threaten the foundation of liberty
+                    itself."
+                  </blockquote>
+                  <p className="text-sm font-semibold text-gold">From the introduction</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Closing Statement */}
         <section className="py-16 sm:py-24">
           <div className="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">

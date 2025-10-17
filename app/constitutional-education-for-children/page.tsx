@@ -782,6 +782,72 @@ export default function ConstitutionalEducationPage() {
           </div>
         </section>
 
+        {/* The Book Section */}
+        <section className="bg-gold/10 py-16 sm:py-24 dark:bg-slate-900/50">
+          <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+            <div className="rounded-lg bg-white p-8 shadow-lg dark:bg-slate-800 sm:p-12 border-2 border-gold/30">
+              <div className="text-center mb-8">
+                <span className="inline-block rounded-full bg-gold/10 px-4 py-1 text-sm font-semibold text-gold mb-4">
+                  For Adults & Legislators
+                </span>
+                <h2 className="text-3xl font-bold text-navy dark:text-slate-100 sm:text-4xl">
+                  Common Sense: Family Is Fundamental
+                </h2>
+                <p className="text-xl text-gold font-semibold mt-2">
+                  The Constitutional Case for Family Court Reform
+                </p>
+              </div>
+
+              <div className="prose prose-lg dark:prose-invert max-w-none mb-8">
+                <p className="text-navy/80 dark:text-slate-300 leading-relaxed">
+                  While these educational resources teach children the 28 principles, this book
+                  examines how violating those principles—especially Principle 26: The Family as the
+                  Fundamental Unit of Society—threatens freedom itself.
+                </p>
+                <p className="text-navy/80 dark:text-slate-300 leading-relaxed mt-4">
+                  Drawing on the founding fathers' understanding of family, personal experience
+                  with family court dysfunction, and the constitutional framework for reform, this
+                  book makes the case for why protecting families is essential to preserving
+                  liberty.
+                </p>
+              </div>
+
+              <div className="bg-navy/5 rounded-lg p-6 dark:bg-slate-900/50 border-l-4 border-gold mb-8">
+                <ul className="space-y-2 text-sm text-navy/80 dark:text-slate-300">
+                  <li>• The 28 principles that built America—with focus on family as core unit</li>
+                  <li>• Constitutional framework for federal family court reform</li>
+                  <li>• Specific policy proposals and legislative solutions</li>
+                  <li>• Personal story of how the system fails families</li>
+                </ul>
+              </div>
+
+              <div className="text-center">
+                <a
+                  href="https://amzn.to/4hgYTIA"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center rounded-lg bg-gold px-8 py-4 text-base font-semibold text-white shadow-lg transition-all hover:bg-gold/90 hover:shadow-xl"
+                >
+                  Available on Amazon
+                  <svg
+                    className="ml-2 h-5 w-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M13 7l5 5m0 0l-5 5m5-5H6"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* CTA Section */}
         <section className="bg-gradient-to-r from-navy to-navy/90 py-16 sm:py-24">
           <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
