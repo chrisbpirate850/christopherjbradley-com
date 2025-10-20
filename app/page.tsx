@@ -1,39 +1,78 @@
 import { Metadata } from 'next'
 import { Navigation } from '@/components/Navigation'
-import { OptimizedImage } from '@/components/OptimizedImage'
+import { ImageCarousel } from '@/components/ImageCarousel'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Christopher J. Bradley | Veteran, Father, Builder of Solutions',
-  description: 'From combat veteran to systems reformer. A personal journey through war, loss, and awakening—building five platforms to help veterans, fathers, and families stay whole.',
+  title: 'Christopher J. Bradley | Gulf War Veteran, Love Everyone Message, Family Court Reform',
+  description: 'Gulf War veteran\'s journey from combat to love consciousness. 10 years on a sailboat, 2000+ sunsets, one lesson: Love everyone, start with you. Family court reform advocate, constitutional educator, PTSD awareness.',
+  keywords: [
+    'Christopher J Bradley',
+    'Gulf War veteran',
+    'love everyone',
+    'choosing love',
+    'world peace',
+    'family court reform',
+    'parental alienation',
+    'veterans PTSD',
+    'constitutional education',
+    'love consciousness',
+    'sailboat life',
+    'sunset photography',
+    'There Is Still Time',
+    'The Central Question',
+    'Sunsets for the Soul',
+    'Family Unity Hub',
+    'veteran mental health',
+    'custody rights',
+    'parental rights',
+    'love everyone message',
+    'peace on earth',
+    'forgiveness',
+    'choose love',
+  ],
+  authors: [{ name: 'Christopher J. Bradley' }],
+  creator: 'Christopher J. Bradley',
+  publisher: 'Christopher J. Bradley',
   openGraph: {
-    title: 'Christopher J. Bradley | Veteran, Father, Builder of Solutions',
-    description: 'From combat veteran to systems reformer. A personal journey through war, loss, and awakening.',
+    title: 'Christopher J. Bradley | Love Everyone - A Veteran\'s Message of Peace',
+    description: 'From Gulf War combat to "love everyone" - A decade on a sailboat, 2000 sunsets, and the greatest lesson: We could all live in peace if each of us decided to love everyone.',
     type: 'profile',
+    url: 'https://christopherjbradley.com',
+    siteName: 'Christopher J. Bradley',
     images: [
+      {
+        url: '/images/front of love everyone letter.jpg',
+        width: 1200,
+        height: 900,
+        alt: 'Dear World - A handwritten letter about choosing love from Christopher J. Bradley',
+      },
       {
         url: '/images/christopher-bradley.jpg',
         width: 1200,
         height: 630,
-        alt: 'Christopher J. Bradley',
+        alt: 'Christopher J. Bradley - Gulf War Veteran and Love Advocate',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Christopher J. Bradley | Veteran, Father, Builder of Solutions',
-    description: 'From combat veteran to systems reformer. A personal journey through war, loss, and awakening.',
-    images: ['/images/christopher-bradley.jpg'],
+    title: 'Love Everyone - A Gulf War Veteran\'s Message',
+    description: '10 years on a sailboat. 2000 sunsets. One lesson: Love everyone, start with you. What if you\'re the person we\'re all waiting on?',
+    images: ['/images/front of love everyone letter.jpg'],
+  },
+  alternates: {
+    canonical: 'https://christopherjbradley.com',
   },
 }
 
-// JSON-LD Structured Data for Person
+// JSON-LD Structured Data for Person and Message
 const personSchema = {
   '@context': 'https://schema.org',
   '@type': 'Person',
   name: 'Christopher J. Bradley',
-  jobTitle: 'Veteran, Father, Builder of Solutions',
-  description: 'Gulf War veteran, law school graduate, and creator of five platforms dedicated to time consciousness, love, family unity, and constitutional principles.',
+  jobTitle: 'Gulf War Veteran, Love Advocate, Family Court Reform Activist',
+  description: 'Gulf War veteran (1991) who spent a decade on a sailboat photographing 2000+ sunsets and discovered the greatest lesson: Love everyone, start with you. Creator of five platforms dedicated to time consciousness, love, family unity, and constitutional principles. Advocate for veterans with PTSD, fathers facing parental alienation, and families destroyed by family courts.',
   image: '/images/christopher-bradley.jpg',
   url: 'https://christopherjbradley.com',
   sameAs: [
@@ -44,28 +83,67 @@ const personSchema = {
     'https://theartofcitizenship.com',
     'https://libertysprinciplespals.com',
     'https://familyunityhub.com',
+    'https://loveeveryone.love',
   ],
   knowsAbout: [
+    'Love Everyone Philosophy',
+    'Choosing Love',
+    'Peace Consciousness',
+    'Gulf War Combat Experience',
+    'PTSD and Veteran Mental Health',
     'Military Service',
     'Veterans Affairs',
     'Family Court Reform',
+    'Parental Alienation',
     'Constitutional Law',
     'Time Consciousness',
     'Parental Rights',
+    'Forgiveness',
+    'Sailboat Living',
+    'Sunset Photography',
+    'Meditation and Presence',
   ],
   alumniOf: [
     {
       '@type': 'Organization',
       name: 'United States Army',
+      description: 'Gulf War Veteran, Tank Driver, 1991',
     },
     {
       '@type': 'EducationalOrganization',
       name: 'Law School',
     },
   ],
+  award: [
+    'Gulf War Service',
+  ],
+  hasOccupation: {
+    '@type': 'Occupation',
+    name: 'Peace Advocate and Platform Builder',
+    description: 'Building platforms to help veterans, fathers, and families through time consciousness, love, and constitutional education',
+  },
 }
 
 export default function Home() {
+  const carouselImages = [
+    {
+      src: '/images/christopher-bradley.jpg',
+      alt: 'Christopher J. Bradley',
+      caption: 'Christopher J. Bradley',
+    },
+    {
+      src: '/images/front of love everyone letter.jpg',
+      alt: 'Dear World - A handwritten letter about love and peace',
+      caption: 'Dear World: A Letter About Love',
+      link: '/dear-world',
+    },
+    {
+      src: '/images/back of lover everyone letter.jpg',
+      alt: 'Christopher J. Bradley in basic training - United States Army',
+      caption: 'Where It All Began - Basic Training',
+    },
+  ]
+
   return (
     <div className="min-h-screen">
       {/* JSON-LD Structured Data */}
@@ -82,17 +160,9 @@ export default function Home() {
         <section className="relative bg-gradient-to-b from-navy/5 to-white dark:from-slate-900/50 dark:to-slate-950">
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
             <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
-              {/* Hero Image */}
+              {/* Hero Image Carousel */}
               <div className="order-1 lg:order-2">
-                <div className="relative aspect-[3/4] w-full max-w-md mx-auto overflow-hidden rounded-lg shadow-2xl">
-                  <OptimizedImage
-                    src="/images/christopher-bradley.jpg"
-                    alt="Christopher J. Bradley"
-                    fill
-                    className="object-cover"
-                    priority
-                  />
-                </div>
+                <ImageCarousel images={carouselImages} autoPlayInterval={6000} />
               </div>
 
               {/* Hero Content */}
@@ -329,7 +399,7 @@ export default function Home() {
                 </a>
               </div>
 
-              {/* Platform 2: The Central Question */}
+              {/* Platform 2: Love Everyone */}
               <div className="group relative rounded-lg bg-white p-8 shadow-sm transition-all hover:shadow-lg dark:bg-slate-800">
                 <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-red/10">
                   <svg
@@ -347,16 +417,14 @@ export default function Home() {
                   </svg>
                 </div>
                 <h4 className="text-xl font-bold text-navy dark:text-slate-100 mb-2">
-                  The Central Question
+                  Love Everyone
                 </h4>
-                <p className="text-sm font-semibold text-red mb-3">For Those Seeking Truth</p>
+                <p className="text-sm font-semibold text-red mb-3">For Those Choosing Love</p>
                 <p className="text-sm text-navy/70 leading-relaxed dark:text-slate-300 mb-4">
-                  Love is the only question that matters. In six years of separation, I learned one
-                  question changes everything: 'Are you feeling love this second?' A platform
-                  exploring love consciousness.
+                  The "Love Everyone" movement reflects not just my journey, but a universal truth: that love has the power to heal, unite, and transcend even life's darkest moments.
                 </p>
                 <a
-                  href="https://thecentralquestion.com"
+                  href="https://loveeveryone.love"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center text-sm font-semibold text-navy transition-colors hover:text-red dark:text-slate-100 dark:hover:text-red"
@@ -837,12 +905,12 @@ export default function Home() {
                 </li>
                 <li>
                   <a
-                    href="https://thecentralquestion.com"
+                    href="https://loveeveryone.love"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-sm text-navy/70 hover:text-gold dark:text-slate-300 dark:hover:text-gold transition-colors"
                   >
-                    The Central Question
+                    Love Everyone
                   </a>
                 </li>
                 <li>
